@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "example": "cd projects/example/xam-xam-app && npm update && npm start"
   },
   "private": true,
   "dependencies": {
