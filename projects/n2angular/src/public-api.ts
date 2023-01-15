@@ -6,6 +6,7 @@ export * from "./lib/pipes";
 export * from "./lib/layouts";
 export * from "./lib/interceptors";
 export * from "./lib/publisher";
+export * from "./lib/validators";
 // export * from "./lib/services";
 
 // export * from "./lib/n2angular.service";

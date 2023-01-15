@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from "@angular/core";
 import { LoadingEvent, N2LoadingPublisher } from "../../publisher";
+import { throwIfMissingAttribute } from "../../validators";
 import { BasePage } from "../pages/base-page";
 
 @Component({
@@ -23,9 +24,7 @@ export class _N2LayoutComponent implements OnInit {
   ngOnInit() {
     console.log("init n2layout");
 
-    if (!this.handler) {
-      throw new Error("missing handler for BasePage");
-    }
+    throwIfMissingAttribute(this, "handler");
 
     this._loadingPublisher.registerChangeListener({
       onChange: (currentState, previousState) => {

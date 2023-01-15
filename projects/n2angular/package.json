@@ -1,6 +1,6 @@
 {
   "name": "@nmhillusion/n2angular",
-  "version": "0.0.1",
+  "version": "2023.01.15.4",
   "peerDependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0",
