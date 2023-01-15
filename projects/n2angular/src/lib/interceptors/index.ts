@@ -1,1 +1,1 @@
-export * from "./n2loading-event.interceptor";
+export * from "./loading-event.interceptor";

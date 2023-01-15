@@ -1,7 +1,8 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from "@angular/core";
+
 import { LoadingEvent, N2LoadingPublisher } from "../../publisher";
 import { throwIfMissingAttribute } from "../../validators";
-import { BasePage } from "../pages/base-page";
+import { N2BasePage } from "../../layouts/pages";
 
 @Component({
   selector: "n2layout",
@@ -14,7 +15,7 @@ export class _N2LayoutComponent implements OnInit {
   };
 
   @Input("handler")
-  handler!: BasePage;
+  handler!: N2BasePage;
 
   constructor(
     private _loadingPublisher: N2LoadingPublisher,
