@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, Input, OnInit } from "@angular/core";
+import { LoadingEvent, N2LoadingPublisher } from "../../publisher";
 import { BasePage } from "../pages/base-page";
 
 @Component({
@@ -14,7 +15,24 @@ export class _N2LayoutComponent implements OnInit {
   @Input("handler")
   handler: BasePage = new BasePage();
 
+  constructor(
+    private _loadingPublisher: N2LoadingPublisher,
+    private _cdr: ChangeDetectorRef
+  ) {}
+
   ngOnInit() {
     console.log("init n2layout");
+
+    this._loadingPublisher.registerChangeListener({
+      onChange: (currentState, previousState) => {
+        const previousLoadingState = this.state.loading;
+
+        this.state.loading = LoadingEvent.START === currentState;
+
+        if (previousLoadingState != this.state.loading) {
+          this._cdr.detectChanges();
+        }
+      },
+    });
   }
 }

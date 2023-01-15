@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "example": "cd projects/example/xam-xam-app && npm update && npm start"
+    "example": "npm run build && cd projects/example/xam-xam-app && npm uninstall @nmhillusion/n2angular && npm i ../../../dist/n2angular && npm start"
   },
   "private": true,
   "dependencies": {
