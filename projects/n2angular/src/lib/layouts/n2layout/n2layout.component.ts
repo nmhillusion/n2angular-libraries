@@ -13,7 +13,7 @@ export class _N2LayoutComponent implements OnInit {
   };
 
   @Input("handler")
-  handler: BasePage = new BasePage();
+  handler!: BasePage;
 
   constructor(
     private _loadingPublisher: N2LoadingPublisher,
@@ -22,6 +22,10 @@ export class _N2LayoutComponent implements OnInit {
 
   ngOnInit() {
     console.log("init n2layout");
+
+    if (!this.handler) {
+      throw new Error("missing handler for BasePage");
+    }
 
     this._loadingPublisher.registerChangeListener({
       onChange: (currentState, previousState) => {
