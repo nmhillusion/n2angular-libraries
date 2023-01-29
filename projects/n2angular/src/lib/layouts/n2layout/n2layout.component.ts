@@ -1,8 +1,8 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from "@angular/core";
 
-import { LoadingEvent, N2LoadingPublisher } from "../../publisher";
-import { throwIfMissingAttribute } from "../../validators";
-import { N2BasePage } from "../../layouts/pages";
+import { LoadingEvent, N2LoadingPublisher } from "@n2/publisher";
+import { throwIfMissingAttribute } from "@n2/validators";
+import { N2BasePage } from "@n2/layouts/pages";
 
 @Component({
   selector: "n2layout",

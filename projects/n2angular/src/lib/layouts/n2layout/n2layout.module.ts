@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 
-import { N2CommonModule } from "../../modules/n2-common.module";
+import { N2CommonModule } from "@n2/modules/n2-common.module";
 import { _N2LayoutComponent } from "./n2layout.component";
 
 @NgModule({

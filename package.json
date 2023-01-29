@@ -1,10 +1,24 @@
 {
+  "type": "commonjs",
   "name": "angular-libraries",
   "version": "0.0.0",
+  "description": "common libraries for n2angular",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "browser": {
+    "shelljs": false,
+    "fs": false,
+    "os": false,
+    "typescript": false
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "rewrite": "ts-node ./builder/rewriteImportPath.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "example": "npm run build && cd projects/example/xam-xam-app && npm uninstall @nmhillusion/n2angular && npm i ../../../dist/n2angular && npm start"
@@ -29,6 +43,7 @@
     "@angular-devkit/build-angular": "^15.0.4",
     "@angular/cli": "~15.0.2",
     "@angular/compiler-cli": "^15.0.0",
+    "@nmhillusion/n2mix": "^2023.129.2",
     "@types/crypto-js": "^4.1.1",
     "@types/jasmine": "~4.3.0",
     "@types/jest": "^29.2.5",
@@ -40,6 +55,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^15.0.3",
-    "typescript": "~4.8.2"
+    "ts-node": "^10.9.1",
+    "typescript": "~4.8.2",
+    "path": "^0.12.7"
   }
 }

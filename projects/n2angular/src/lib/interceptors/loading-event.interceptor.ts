@@ -8,7 +8,7 @@ import {
 } from "@angular/common/http";
 import { Observable } from "rxjs/internal/Observable";
 import { tap } from "rxjs/operators";
-import { N2LoadingPublisher } from "../publisher/n2loading.publisher";
+import { N2LoadingPublisher } from "@n2/publisher";
 
 @Injectable()
 export class N2LoadingEventInterceptor implements HttpInterceptor {

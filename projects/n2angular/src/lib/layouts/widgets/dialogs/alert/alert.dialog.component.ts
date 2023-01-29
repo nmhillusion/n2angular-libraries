@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 
-import { throwIfMissingAttribute } from "../../../../validators";
+import { throwIfMissingAttribute } from "@n2/validators";
 
 @Component({
   selector: "n2-alert-dialog",

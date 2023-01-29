@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -13,7 +12,9 @@
     "sourceMap": true,
     "paths": {
       "n2angular": ["dist/n2angular"],
-      "n2angular/*": ["dist/n2angular/*"]
+      "n2angular/*": ["dist/n2angular/*"],
+      "@n2": ["dist/n2angular/lib", "projects/n2angular/src/lib"],
+      "@n2/*": ["dist/n2angular/lib/*", "projects/n2angular/src/lib/*"]
     },
     "declaration": false,
     "downlevelIteration": true,
@@ -21,7 +22,7 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
+    "module": "CommonJS",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"]
   },
