@@ -4,12 +4,11 @@ import * as fs from "fs";
 
 console.log(
   " START rewrite import path >>> ",
-  path.resolve(__dirname, "../tsconfig.json"),
-  fs.readFileSync(path.resolve(__dirname, "../tsconfig.json")).toString()
+  path.resolve(__dirname, "../tsconfig.rewrite.path.json")
 );
 
 rewritePathsOfTsConfig(
-  path.resolve(__dirname, "../tsconfig.json"),
+  path.resolve(__dirname, "../tsconfig.rewrite.path.json"),
   path.resolve(__dirname, "../dist/n2angular"),
   (filePath) => String(filePath).endsWith(".ts")
 );

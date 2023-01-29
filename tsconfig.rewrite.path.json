@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@n2": ["dist/n2angular/lib"],
+      "@n2/*": ["dist/n2angular/lib/*"]
+    }
+  }
+}
