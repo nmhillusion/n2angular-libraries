@@ -3,5 +3,52 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "n2-layout": {
+      "projectType": "library",
+      "root": "projects/n2-layout",
+      "sourceRoot": "projects/n2-layout/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/n2-layout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/n2-layout/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/n2-layout/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/n2-layout/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/n2-layout/**/*.ts",
+              "projects/n2-layout/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
